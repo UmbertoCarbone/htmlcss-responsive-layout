@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  border: 1px dashed red;
 }
 
 .debug {
@@ -174,10 +175,10 @@
   font-family: "Nerko One", cursive;
   font-weight: 400;
   font-style: oblique;
-  text-align: center;
+
   font-size: 5rem;
   color: #fc9414;
-  margin: 2.5rem;
+  margin: 1.5rem;
 }
 
 .steps {
@@ -185,42 +186,88 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  background-color: #c4c1bb;
+  background-color: #f4f3f1;
 }
 
 .container {
   width: 100%;
-}
-
-.row {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: 0 auto;
-
-  .video {
-    width: 100%;
-  }
-}
-
-.card {
-  width: 100%;
-  background-color: white;
-  padding-bottom: 1.5rem;
-  box-shadow: 0px 10px 10px 2px grey;
   h2 {
-    padding: 1.3rem;
+    color: #462b5f;
+    padding: 2rem;
+    font-size: 2.5rem;
   }
   p {
     padding: 1rem;
     margin: 1rem;
   }
+  h3 {
+    color: #ababab;
+    padding-top: 2rem;
+    padding-left: 2rem;
+  }
 }
 
-.steps .col-12 {
-  width: calc(100% / 12 * 12);
+.row {
+  width: 90%;
+  margin: 0 auto;
 }
 
-.steps .col-6 {
+.card {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 10px 10px 2px grey;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+}
+.steps .col-4 {
+  width: calc(100% / 12 * 4);
+}
+
+.steps .col-8 {
+  width: calc(100% / 12 * 8);
+}
+.steps .col-2 {
+  width: calc(100% / 12 * 2);
+}
+
+/* .steps .col-6 {
   width: calc(100% / 12 * 6);
+} */
+
+/************************************************
+    SOLUZIONE RESPONSIVE
+ ************************************************/
+@media screen and (min-width: 992px) {
+  .container {
+    width: 100%;
+  }
+
+  .row {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+
+  .row {
+    display: flex;
+  }
 }
