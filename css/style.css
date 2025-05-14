@@ -191,6 +191,7 @@
 
 .container {
   width: 100%;
+
   h2 {
     color: #462b5f;
     padding: 2rem;
@@ -208,9 +209,15 @@
 }
 
 .row {
+  display: flex;
+
   margin: 0 auto;
 }
 
+.info {
+  width: 100%;
+  margin: 0 auto;
+}
 .card {
   width: 100%;
   background-color: white;
@@ -218,18 +225,21 @@
 }
 
 .video {
+  height: auto;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 16 / 9;
 }
-.steps .col-lg-4 {
+
+.click-fonts {
+  display: flex;
+  justify-content: space-around;
+}
+.col-4 {
   width: calc(100% / 12 * 4);
 }
 
-.steps .col-8 {
+.col-8 {
   width: calc(100% / 12 * 8);
-}
-.steps .col-2 {
-  width: calc(100% / 12 * 2);
 }
 
 /* .steps .col-6 {
@@ -239,17 +249,50 @@
 /************************************************
     SOLUZIONE RESPONSIVE
  ************************************************/
-@media screen and (max-width: 992px) {
+
+@media screen and (min-width: 992px) {
   .container {
     width: 100%;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .container {
     width: 100%;
   }
-  .steps .col {
+  .col-8 .col-4 {
     width: 100%;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .info {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .container {
+    width: 100%;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    text-align: center;
   }
 }
